@@ -1,0 +1,109 @@
+<html>
+  <head>
+    <title>Register Page</title>
+  </head>
+  <style>
+    /* Apply some basic styles to the form container */
+        form {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          font-family: Arial, sans-serif;
+        }
+        
+        /* Style the labels */
+        label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: bold;
+        }
+        
+        /* Style the input fields */
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          font-size: 16px;
+        }
+        
+        /* Style the submit button */
+        input[type="submit"] {
+          background-color: #007bff;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 3px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        
+        /* Add some spacing between elements */
+        form > * {
+          margin-bottom: 10px;
+        }
+
+        /* Style the Submit button */
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      
+      /* Add hover effect */
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      /* Add focus styles for accessibility */
+      button:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+      
+      /* Center the button if needed */
+      button.center {
+        display: block;
+        margin: 0 auto;
+      }
+
+        
+  </style>
+</html>
+<body>
+  {% include "nav.html" %}
+  <h2 class = "text-center lead">Registration Page</h2>
+    <form action = "/registersubmitted">
+      <label>First Name</label>
+      <input type = "text" name = "first name">
+    
+      <label>Last Name</label>
+      <input type = "text" name = "last name">
+    
+      <label>Email</label>
+      <input type = "email" name = "email">
+    
+      <label>contact Number</label>
+      <input type = "text" name = "contactnumber">
+    
+      <label>New Password</label>
+      <input type = "text" name = "newpassword">
+    
+      <label>Confirm Password</label>
+      <input type = "text" name = "confirm password">
+
+      <button>Submit</button>
+    </form>
+
+  {% include "footer.html" %}
+</body>
+</html>
